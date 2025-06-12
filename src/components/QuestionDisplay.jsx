@@ -1,12 +1,20 @@
-// src/components/QuestionDisplay.jsx
+import './QuestionDisplay.module.css';
+
 function QuestionDisplay({ question }) {
-    return (
-      <div style={{ marginTop: '1rem' }}>
-        <h3>Generated question: </h3>
-        <pre>{question}</pre>
-      </div>
-    );
+  if (!question) return null;
+
+  const [prompt, ...codeLines] = question.split('\n');
+  const code = codeLines.join('\n');
+
+  return (
+    <div className="question-container">
+      <h3 className="title">🧠 Generated Question</h3>
+      <p className="prompt">{prompt}</p>
+      <pre className="code-block">
+        <code>{code}</code>
+      </pre>
+    </div>
+  );
 }
 
 export default QuestionDisplay;
-  

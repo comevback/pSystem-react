@@ -1,6 +1,6 @@
 // src/pages/QuizPage.jsx
 import { useState } from 'react';
-import { generateQuestion } from '../services/api';
+import { generateQuestion, generateQuestion_mock } from '../services/api';
 import CodeInput from '../components/CodeInput';
 import QuestionDisplay from '../components/QuestionDisplay';
 
@@ -9,7 +9,7 @@ function QuizPage() {
   const [question, setQuestion] = useState('');
 
   const handleGenerate = async () => {
-    const res = await generateQuestion(code);
+    const res = await generateQuestion_mock(code);
     setQuestion(res.question || 'Failed to generate question');
   };
 

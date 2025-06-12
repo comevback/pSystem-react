@@ -4,7 +4,7 @@ function CodeInput({ code, setCode }) {
       <div>
         <textarea
           rows="10"
-          cols="50"
+          cols="80"
           placeholder="Please input source code..."
           value={code}
           onChange={(e) => setCode(e.target.value)}

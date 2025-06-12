@@ -1,0 +1,28 @@
+.question-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.title {
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.prompt {
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.code-block {
+    background-color: #272822;
+    color: #f8f8f2;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-size: 14px;
+}
